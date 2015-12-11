@@ -25,13 +25,13 @@ public class DomTest {
     public ExpectedException expectedEx = ExpectedException.none();
 
     @Before
-    public void setUp(){
+    public void setUp() {
         dom = new Dom();
         System.setOut(new PrintStream(outContent));
     }
 
     @After
-    public void tearDown(){
+    public void tearDown() {
         System.setOut(null);
     }
 
@@ -48,15 +48,15 @@ public class DomTest {
 
         // Test attributes
         assertTrue("Character's client no. should be 1.",
-                ((CharacterSprite)dom.dynamicObjects.elementAt(0)).clientno == 1);
+                ((CharacterSprite) dom.dynamicObjects.elementAt(0)).clientno == 1);
         assertEquals("Initial direction will be East (0).",
-                ((CharacterSprite)dom.dynamicObjects.elementAt(0)).dir, 0);
+                ((CharacterSprite) dom.dynamicObjects.elementAt(0)).dir, 0);
         assertEquals("Initial speed will be 0.",
-                ((CharacterSprite)dom.dynamicObjects.elementAt(0)).speed, 0);
+                ((CharacterSprite) dom.dynamicObjects.elementAt(0)).speed, 0);
         assertEquals("Initial position on x axis will be 0.",
-                ((CharacterSprite)dom.dynamicObjects.elementAt(0)).pos.x, 0);
+                ((CharacterSprite) dom.dynamicObjects.elementAt(0)).pos.x, 0);
         assertEquals("Initial position on y axis will be 0.",
-                ((CharacterSprite)dom.dynamicObjects.elementAt(0)).pos.y, 0);
+                ((CharacterSprite) dom.dynamicObjects.elementAt(0)).pos.y, 0);
     }
 
     @Test
@@ -106,17 +106,17 @@ public class DomTest {
 
         // Test attributes
         assertTrue("Item's index should be 1.",
-                ((ItemSprite)dom.dynamicObjects.elementAt(0)).index == 1);
+                ((ItemSprite) dom.dynamicObjects.elementAt(0)).index == 1);
         assertEquals("Item's name should be \"Item\".",
-                ((ItemSprite)dom.dynamicObjects.elementAt(0)).name, "Item");
+                ((ItemSprite) dom.dynamicObjects.elementAt(0)).name, "Item");
         assertTrue("Item should can be shared.",
-                ((ItemSprite)dom.dynamicObjects.elementAt(0)).shared);
+                ((ItemSprite) dom.dynamicObjects.elementAt(0)).shared);
         assertEquals("Initial position on x axis will be 0.",
-                ((ItemSprite)dom.dynamicObjects.elementAt(0)).pos.x, 3);
+                ((ItemSprite) dom.dynamicObjects.elementAt(0)).pos.x, 3);
         assertEquals("Initial position on y axis will be 0.",
-                ((ItemSprite)dom.dynamicObjects.elementAt(0)).pos.y, -4);
+                ((ItemSprite) dom.dynamicObjects.elementAt(0)).pos.y, -4);
         assertEquals("Item should not be owned by anyone at start.",
-                ((ItemSprite)dom.dynamicObjects.elementAt(0)).owner, -1);
+                ((ItemSprite) dom.dynamicObjects.elementAt(0)).owner, -1);
     }
 
     @Test

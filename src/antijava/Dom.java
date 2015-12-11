@@ -130,7 +130,7 @@ public class Dom implements DomInterface {
 
     // Other methods
 
-    public int getVirtualCharacterCount(){
+    public int getVirtualCharacterCount() {
         // Count how many characters on map
         int count = 0;
 
@@ -143,7 +143,7 @@ public class Dom implements DomInterface {
         return count;
     }
 
-    public CharacterSprite getVirtualCharacterByNo(int clientno){
+    public CharacterSprite getVirtualCharacterByNo(int clientno) {
         // Return CharacterSprite with specified client no.
         for (Sprite s : dynamicObjects) {
             if (s instanceof CharacterSprite && ((CharacterSprite) s).clientno == clientno) {

@@ -8,12 +8,12 @@ public class CharacterSprite extends Sprite {
     public int dir;
     public int speed;
 
-    public CharacterSprite(int no){
+    public CharacterSprite(int no) {
         clientno = no;
         update(0, 0, new Point(0, 0));
     }
 
-    public void update(int dir, int speed, Point p){
+    public void update(int dir, int speed, Point p) {
         this.dir = dir;
         this.speed = speed;
         this.pos = p;
