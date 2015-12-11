@@ -1,9 +1,6 @@
 package antijava.test;
 
-import antijava.CharacterSprite;
-import antijava.Dom;
-import antijava.ItemSprite;
-import antijava.Sprite;
+import antijava.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
@@ -13,6 +10,7 @@ import org.junit.rules.ExpectedException;
 import java.awt.*;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.net.InetAddress;
 import java.util.Vector;
 
 import static org.junit.Assert.*;
@@ -298,7 +296,17 @@ public class DomTest {
     public void testKeyGETPressedEastYes() throws Exception {
         // Test getting a item from east
         // Initialize TCPCM
-        dom.tcpcm = System.out::print;
+        dom.tcpcm = new TcpcmInterface() {
+            @Override
+            public boolean connectServer(InetAddress serverip) {
+                return false;
+            }
+
+            @Override
+            public void inputMoves(int MoveCode) {
+                System.out.print(MoveCode);
+            }
+        };
 
         // Add character of current client
         dom.addVirtualCharacter(2);
@@ -330,7 +338,17 @@ public class DomTest {
     public void testKeyGETPressedSouthYes() throws Exception {
         // Test getting a item from south
         // Initialize TCPCM
-        dom.tcpcm = System.out::print;
+        dom.tcpcm = new TcpcmInterface() {
+            @Override
+            public boolean connectServer(InetAddress serverip) {
+                return false;
+            }
+
+            @Override
+            public void inputMoves(int MoveCode) {
+                System.out.print(MoveCode);
+            }
+        };
 
         // Add character of current client
         dom.addVirtualCharacter(2);
@@ -362,7 +380,17 @@ public class DomTest {
     public void testKeyGETPressedNorthYes() throws Exception {
         // Test getting a item from north
         // Initialize TCPCM
-        dom.tcpcm = System.out::print;
+        dom.tcpcm = new TcpcmInterface() {
+            @Override
+            public boolean connectServer(InetAddress serverip) {
+                return false;
+            }
+
+            @Override
+            public void inputMoves(int MoveCode) {
+                System.out.print(MoveCode);
+            }
+        };
 
         // Add character of current client
         dom.addVirtualCharacter(2);
@@ -394,7 +422,17 @@ public class DomTest {
     public void testKeyGETPressedWestYes() throws Exception {
         // Test getting a item from west
         // Initialize TCPCM
-        dom.tcpcm = System.out::print;
+        dom.tcpcm = new TcpcmInterface() {
+            @Override
+            public boolean connectServer(InetAddress serverip) {
+                return false;
+            }
+
+            @Override
+            public void inputMoves(int MoveCode) {
+                System.out.print(MoveCode);
+            }
+        };
 
         // Add character of current client
         dom.addVirtualCharacter(2);
@@ -426,7 +464,17 @@ public class DomTest {
     public void testKeyGETPressedEastNo() throws Exception {
         // Test getting a item from east
         // Initialize TCPCM
-        dom.tcpcm = System.out::print;
+        dom.tcpcm = new TcpcmInterface() {
+            @Override
+            public boolean connectServer(InetAddress serverip) {
+                return false;
+            }
+
+            @Override
+            public void inputMoves(int MoveCode) {
+                System.out.print(MoveCode);
+            }
+        };
 
         // Add character of current client
         dom.addVirtualCharacter(2);
@@ -458,7 +506,17 @@ public class DomTest {
     public void testKeyGETPressedSouthNo() throws Exception {
         // Test getting a item from south
         // Initialize TCPCM
-        dom.tcpcm = System.out::print;
+        dom.tcpcm = new TcpcmInterface() {
+            @Override
+            public boolean connectServer(InetAddress serverip) {
+                return false;
+            }
+
+            @Override
+            public void inputMoves(int MoveCode) {
+                System.out.print(MoveCode);
+            }
+        };
 
         // Add character of current client
         dom.addVirtualCharacter(2);
@@ -490,7 +548,17 @@ public class DomTest {
     public void testKeyGETPressedNorthNo() throws Exception {
         // Test getting a item from north
         // Initialize TCPCM
-        dom.tcpcm = System.out::print;
+        dom.tcpcm = new TcpcmInterface() {
+            @Override
+            public boolean connectServer(InetAddress serverip) {
+                return false;
+            }
+
+            @Override
+            public void inputMoves(int MoveCode) {
+                System.out.print(MoveCode);
+            }
+        };
 
         // Add character of current client
         dom.addVirtualCharacter(2);
@@ -522,7 +590,17 @@ public class DomTest {
     public void testKeyGETPressedWestNo() throws Exception {
         // Test getting a item from west
         // Initialize TCPCM
-        dom.tcpcm = System.out::print;
+        dom.tcpcm = new TcpcmInterface() {
+            @Override
+            public boolean connectServer(InetAddress serverip) {
+                return false;
+            }
+
+            @Override
+            public void inputMoves(int MoveCode) {
+                System.out.print(MoveCode);
+            }
+        };
 
         // Add character of current client
         dom.addVirtualCharacter(2);
