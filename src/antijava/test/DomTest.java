@@ -185,7 +185,7 @@ public class DomTest {
 
         // Get item
         ItemSprite item = null;
-        for (Sprite s : dom.dynamicObjects) {
+        for (SpriteInterface s : dom.dynamicObjects) {
             if (s instanceof ItemSprite && ((ItemSprite) s).index == 1) {
                 item = (ItemSprite) s;
                 break;
@@ -321,7 +321,7 @@ public class DomTest {
 
         // Get item
         ItemSprite item = null;
-        for (Sprite s : dom.dynamicObjects) {
+        for (SpriteInterface s : dom.dynamicObjects) {
             if (s instanceof ItemSprite && ((ItemSprite) s).index == 1) {
                 item = (ItemSprite) s;
                 break;
@@ -363,7 +363,7 @@ public class DomTest {
 
         // Get item
         ItemSprite item = null;
-        for (Sprite s : dom.dynamicObjects) {
+        for (SpriteInterface s : dom.dynamicObjects) {
             if (s instanceof ItemSprite && ((ItemSprite) s).index == 1) {
                 item = (ItemSprite) s;
                 break;
@@ -405,7 +405,7 @@ public class DomTest {
 
         // Get item
         ItemSprite item = null;
-        for (Sprite s : dom.dynamicObjects) {
+        for (SpriteInterface s : dom.dynamicObjects) {
             if (s instanceof ItemSprite && ((ItemSprite) s).index == 1) {
                 item = (ItemSprite) s;
                 break;
@@ -447,7 +447,7 @@ public class DomTest {
 
         // Get item
         ItemSprite item = null;
-        for (Sprite s : dom.dynamicObjects) {
+        for (SpriteInterface s : dom.dynamicObjects) {
             if (s instanceof ItemSprite && ((ItemSprite) s).index == 1) {
                 item = (ItemSprite) s;
                 break;
@@ -489,7 +489,7 @@ public class DomTest {
 
         // Get item
         ItemSprite item = null;
-        for (Sprite s : dom.dynamicObjects) {
+        for (SpriteInterface s : dom.dynamicObjects) {
             if (s instanceof ItemSprite && ((ItemSprite) s).index == 1) {
                 item = (ItemSprite) s;
                 break;
@@ -531,7 +531,7 @@ public class DomTest {
 
         // Get item
         ItemSprite item = null;
-        for (Sprite s : dom.dynamicObjects) {
+        for (SpriteInterface s : dom.dynamicObjects) {
             if (s instanceof ItemSprite && ((ItemSprite) s).index == 1) {
                 item = (ItemSprite) s;
                 break;
@@ -573,7 +573,7 @@ public class DomTest {
 
         // Get item
         ItemSprite item = null;
-        for (Sprite s : dom.dynamicObjects) {
+        for (SpriteInterface s : dom.dynamicObjects) {
             if (s instanceof ItemSprite && ((ItemSprite) s).index == 1) {
                 item = (ItemSprite) s;
                 break;
@@ -615,7 +615,7 @@ public class DomTest {
 
         // Get item
         ItemSprite item = null;
-        for (Sprite s : dom.dynamicObjects) {
+        for (SpriteInterface s : dom.dynamicObjects) {
             if (s instanceof ItemSprite && ((ItemSprite) s).index == 1) {
                 item = (ItemSprite) s;
                 break;

@@ -7,7 +7,7 @@ public class Dom implements DomInterface {
     public TcpcmInterface tcpcm;
 
     public int currentClientNo = -1;
-    public Vector<Sprite> dynamicObjects = new Vector<>();
+    public Vector<SpriteInterface> dynamicObjects = new Vector<>();
 
     // Add a new virtual character to map
     public void addVirtualCharacter(int clientno) throws Exception {
@@ -134,7 +134,7 @@ public class Dom implements DomInterface {
         // Count how many characters on map
         int count = 0;
 
-        for (Sprite s : dynamicObjects) {
+        for (SpriteInterface s : dynamicObjects) {
             if (s instanceof CharacterSprite) {
                 count++;
             }
@@ -145,7 +145,7 @@ public class Dom implements DomInterface {
 
     public CharacterSprite getVirtualCharacterByNo(int clientno) {
         // Return CharacterSprite with specified client no.
-        for (Sprite s : dynamicObjects) {
+        for (SpriteInterface s : dynamicObjects) {
             if (s instanceof CharacterSprite && ((CharacterSprite) s).clientno == clientno) {
                 return (CharacterSprite) s;
             }
@@ -168,7 +168,7 @@ public class Dom implements DomInterface {
 
     public ItemSprite getItemByIndex(int index) {
         // Get item by its index
-        for (Sprite s : dynamicObjects) {
+        for (SpriteInterface s : dynamicObjects) {
             if (s instanceof ItemSprite && ((ItemSprite) s).index == index) {
                 return (ItemSprite) s;
             }
@@ -179,8 +179,8 @@ public class Dom implements DomInterface {
 
     public ItemSprite getItemByPos(Point p) {
         // Get item by its position
-        for (Sprite s : dynamicObjects) {
-            if (s instanceof ItemSprite && s.pos.x == p.x && s.pos.y == p.y) {
+        for (SpriteInterface s : dynamicObjects) {
+            if (s instanceof ItemSprite && ((ItemSprite) s).pos.x == p.x && ((ItemSprite) s).pos.y == p.y) {
                 return (ItemSprite) s;
             }
         }
