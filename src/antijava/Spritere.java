@@ -1,22 +1,15 @@
 package antijava;
 
-import javax.swing.*;
 import java.util.Vector;
 
 public class Spritere {
     public DomInterface dom;
-    public UimInterface uim;
-    public JPanel panel;
 
-    public void renderSprites() {
-        panel = new JPanel();
-        panel.setLayout(null);
-        panel.setSize(400, 400);
+    public void renderSprites() throws Exception {
+        Vector<SpriteInterface> objects = dom.getAllDynamicObjects();
+        if (objects == null)
+            throw new Exception("Vector is null.");
 
-        Vector<Sprite> objects = dom.getAllDynamicObjects();
-        objects.forEach((sprite) -> sprite.draw(panel));
-
-        uim.getWindow().setContentPane(panel);
-        uim.getWindow().revalidate();
+        objects.forEach((sprite) -> sprite.draw());
     }
 }
